@@ -29,13 +29,15 @@ fi
 echo "SUCCESS"
 dt=$(date +"%d-%m-%y" )
 mkdir $dt
-
-if (( $?!=1 )) || (( $? !=0 ))
+touch $dt/.tmp.txt
+if (( $? ))
 then
+	echo "Problem Encountered"
+else
+	rm $dt/.tmp.txt
 	clear
 	echo "SUCCESS2"
-else
-	echo "Problem with dir creation"
 fi
+
 
 
