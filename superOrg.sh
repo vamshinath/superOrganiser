@@ -49,6 +49,6 @@ find . -maxdepth 1 -type f  \( -iname '*.jpg' -or -iname '*.jpeg' -or -iname '*.
 find . -maxdepth 1 -type f  \( -iname '*.3gp' -or -iname '*.mkv' -or -iname '*.mp4' -or -iname '*.flv'  \) -exec mv {} ./$dt/videos \;
 find . -maxdepth 1 -type f  \( -iname '*.txt' -or -iname '*.odf' -or -iname '*.pdf' -or -iname '*.doc' -or -iname '*.docx' -or -iname '*.ppt' -or -iname '*.pptx' \) -exec mv {} ./$dt/documents \;
 find . -maxdepth 1 -type f -iname "*.mp3" -exec mv {} ./$dt/songs \;
-find . -maxdepth 1 -type f  -exec mv {} ./$dt/other \;
+find . -maxdepth 1 -type f ! -name '.*'  -exec mv {} ./$dt/other \;
 
 exit 0
