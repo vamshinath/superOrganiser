@@ -25,6 +25,17 @@ else
 		exit 0
 	fi
 fi
+
 echo "SUCCESS"
+dt=$(date +"%d-%m-%y" )
+mkdir $dt
+
+if (( $?!=1 )) || (( $? !=0 ))
+then
+	clear
+	echo "SUCCESS2"
+else
+	echo "Problem with dir creation"
+fi
 
 
